@@ -463,7 +463,7 @@ nav {
 
 /* GitHub Projects Section */
 .github-projects {
-    margin-top: 80px;
+    margin-top: 60px; /* Reduced from 80px */
 }
 
 .github-header {
@@ -476,7 +476,14 @@ nav {
 .github-stats {
     display: flex;
     gap: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px; /* Added to separate stats from projects */
+}
+
+/* Ensure the projects container has a consistent grid */
+#github-repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .stat-box {
@@ -851,6 +858,20 @@ footer {
         width: 100%;
         text-align: center;
     }
+
+        .github-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .github-stats {
+        flex-wrap: wrap;
+    }
+
+    #github-repos {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
     
     .skills-visual {
         grid-template-columns: repeat(3, 1fr);
@@ -888,6 +909,10 @@ footer {
     
     .hero-text .subtitle {
         font-size: 1.3rem;
+    }
+
+    #github-repos {
+        grid-template-columns: 1fr;
     }
     
     .skills-visual {
